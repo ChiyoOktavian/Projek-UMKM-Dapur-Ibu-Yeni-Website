@@ -70,7 +70,14 @@ year.textContent = new Date().getFullYear();
 /* ================= SCROLL ANIMATION ================= */
 
 const animatedElements = document.querySelectorAll(
-    ".menu-card, .swot-card, .sop-card, .review-card, .vm-card"
+    ".menu-card, " +
+    ".swot-card, " +
+    ".sop-card, " +
+    ".review-card, " +
+    ".vm-card, " +
+    ".delivery-card, " +
+    ".documentation-card, " +
+    ".media-card"
 );
 
 const observer = new IntersectionObserver(
@@ -105,12 +112,12 @@ animatedElements.forEach(function (element) {
 
     element.style.opacity = "0";
     element.style.transform = "translateY(25px)";
-    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    element.style.transition =
+        "opacity 0.6s ease, transform 0.6s ease";
 
     observer.observe(element);
 
 });
-
 
 /* ================= NAVBAR SHADOW ================= */
 
