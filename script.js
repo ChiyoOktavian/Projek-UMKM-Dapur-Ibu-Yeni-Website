@@ -96,7 +96,8 @@ const products = {
     ayam: { name: "Ayam Goreng Serundeng", price: 17000, qty: 0 },
     nasgor: { name: "Nasi Goreng Spesial", price: 15000, qty: 0 },
     mierebus: { name: "Mie Rebus Kuah Warm", price: 15000, qty: 0 },
-    tongseng: { name: "Tongseng Gurih", price: 20000, qty: 0 }
+    tongseng: { name: "Tongseng Gurih", price: 20000, qty: 0 },
+    "mie-goreng": { name: "Mie Goreng",price: 15000,qty: 0 }
 };
 
 function updateQty(key, change) {
