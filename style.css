@@ -698,56 +698,146 @@ nav a:hover {
     margin-top: 4px;
 }
 
-/* ================= SWOT ================= */
+
+/* ================= ANALISIS SWOT ================= */
 .swot-section {
-    background: var(--white);
+    background: #f8f6ef;
+    padding: 70px 0;
+}
+
+.swot-section .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.swot-section .section-heading h2 {
+    color: #354b3b;
+    margin: 12px 0;
+}
+
+.swot-section .section-heading p {
+    color: #666b60;
+    line-height: 1.8;
 }
 
 .swot-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
 }
 
 .swot-card {
-    padding: 25px;
-    background: var(--white);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    border-left: 5px solid var(--primary);
-    box-shadow: var(--shadow);
+    background: #fff;
+    padding: 28px;
+    border: 1px solid #e5e5d9;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(45, 62, 45, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.swot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(45, 62, 45, 0.1);
 }
 
 .swot-icon {
-    font-size: 30px;
-    margin-bottom: 6px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf1e7;
+    border-radius: 14px;
+    font-size: 26px;
+    margin-bottom: 18px;
 }
 
 .swot-card h3 {
-    font-family: "DM Serif Display", serif;
-    font-size: 24px;
+    color: #354b3b;
+    font-size: 19px;
+    margin: 0 0 12px;
+    line-height: 1.5;
 }
 
-.swot-sub {
-    color: var(--gray);
-    font-size: 11px;
-    display: block;
-    margin-bottom: 15px;
+.swot-card p {
+    color: #65685f;
+    font-size: 15px;
+    line-height: 1.85;
+    margin: 0;
 }
 
-.swot-card ul {
-    padding-left: 18px;
+/* Strategi pemasaran */
+.marketing-strategy {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 32px;
+    padding: 35px;
+    background: #e9eee2;
+    border-radius: 18px;
+    border: 1px solid #dce4d3;
 }
 
-.swot-card li {
-    margin-bottom: 8px;
-    color: var(--gray);
-    font-size: 13px;
+.marketing-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    background: #fff;
+    border-radius: 16px;
+    font-size: 28px;
 }
 
-.weakness { border-left-color: #c8892f; }
-.opportunity { border-left-color: #4f8c63; }
-.threat { border-left-color: #a53e3e; }
+.marketing-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.marketing-content h2 {
+    color: #354b3b;
+    margin: 12px 0 16px;
+    font-size: 25px;
+}
+
+.marketing-content p {
+    color: #565e52;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 14px;
+}
+
+.marketing-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 768px) {
+    .swot-section {
+        padding: 50px 0;
+    }
+
+    .swot-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .swot-card {
+        padding: 23px;
+    }
+
+    .marketing-strategy {
+        flex-direction: column;
+        padding: 25px;
+        gap: 18px;
+    }
+
+    .marketing-content h2 {
+        font-size: 22px;
+    }
+}
 
 /* ================= SOP ================= */
 .sop-section {
@@ -1766,5 +1856,88 @@ footer {
 
     .menu-grid .menu-image {
         height: 90px !important;
+    }
+}
+
+/* Foto QRIS asli */
+.qris-image {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+/* ================= MEDIA PROMOSI ================= */
+.media-section {
+    margin-top: 55px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.media-card {
+    min-width: 0;
+    padding: 18px;
+    background: #fffdf7;
+    border: 1px solid #e7e0cf;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(72, 55, 30, 0.08);
+    text-align: center;
+}
+
+.media-card a {
+    display: block;
+}
+
+.promotion-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+}
+
+.media-card a:hover .promotion-image {
+    transform: scale(1.02);
+}
+
+.poster-image {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.banner-image {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.media-card h4 {
+    margin: 16px 0 8px;
+    color: #354b3b;
+}
+
+.media-card p {
+    margin: 0;
+    color: #68685f;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media-card {
+        padding: 14px;
     }
 }
